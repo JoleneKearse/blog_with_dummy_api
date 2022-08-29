@@ -9,17 +9,22 @@
     <title>My Blog</title>
 </head>
 <body>
-    <nav>
+    <nav class="flex">
         <h1>My Blog</h1>
     </nav>
-    <form class="newPost">
-        <label for="postTitle">Title:</label>
-        <input type="text" name="postTitle" id="postTitle" placeholder="Attention-grabbing title">
-        <label for="postBody">Body:</label>
-        <textarea name="postBody" id="postBody" cols="30" rows="10" placeholder="Impart your awesome knowledge here!"></textarea>
-        <button type="submit">Post</button>
-    </form>
-    <div id="blogList"></div>
+    <div class="container">
+        <form class="newPost flex">
+            <h2>Update your peeps</h2>
+            <div class="input-area new-post-title">
+                <label for="postTitle">Title:</label>
+                <input type="text" name="postTitle" id="postTitle" placeholder="Attention-grabbing title">
+            </div>
+            <label for="postBody">Body:</label>
+            <textarea name="postBody" id="postBody" cols="30" rows="10" placeholder="Impart your awesome knowledge here!"></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <div id="blogList"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
