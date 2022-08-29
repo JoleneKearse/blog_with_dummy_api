@@ -37,6 +37,10 @@ img {
     display: block;
     max-width: 100%;
 }
+html {
+    width: 100vw;
+    height: 100%;
+}
 body {
     width: 100vw;
     height: 100%;
@@ -47,6 +51,10 @@ body {
     line-height: 1.2;
     color: var(--clr-dark);
     background-color: #f9ffff;
+    background-image: linear-gradient(135deg, #28B68B, #91DB7B, #F9F871);
+    /* background-position: cover; */
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 ol, ul {
     quotes: none;
@@ -90,11 +98,15 @@ textarea {
     font-size: clamp(1rem, 0.8676rem + 0.5882vw, 1.75rem);
 }
 ::placeholder {
+    font-weight: 400;
     color: var(--clr-accent-teal);
 }
 input,
 textarea {
     color: var(--clr-dark);
+    background-color: #F1F1E666;
+    border: none;
+    border-radius: .25rem;
 }
 
 /* ---------- LAYOUT ----------*/
@@ -116,19 +128,22 @@ form {
     gap: var(--gap);
     padding-top: 20vh;
 }
-.new-post-title {
+.new-post-title label,
+.new-post-title input{
     display: block;
 }
 
-
+#postTitle,
+#postBody {
+    width: 600px;
+}
 
 /* ---------- COMPONENTS ----------*/
 button {
     padding: .75rem 1.5rem;
     background-image: linear-gradient(75deg, #C790C099, #967AAC99, #65659299);
     border: none;
+    border-radius: .5rem;
 }
-
-
 
 /* ---------- MEDIA QUERIES ----------*/
