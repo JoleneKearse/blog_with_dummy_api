@@ -1,0 +1,70 @@
+/* ---------- CUSTOM PROPERTIES ----------*/
+:root {
+    --clr-white: #fff;
+    --clr-black: #000;
+    --gap: 1rem;
+}
+
+/* ---------- RESET ----------*/
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, p, blockquote, pre,
+a, abbr, acronym, address, cite, code,
+del, dfn, em, img, q, s, small, strike, strong, sub, sup, 
+b, u, i, dl, dt, dd, ol, ul, li, form, label, legend, caption, article, figure, figcaption, footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2;
+    color: #232323;
+    background-color: #f9ffff;
+}
+
+ol, ul {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* ---------- TYPOGRAPHY ----------*/
+
+
+
+
+/* ---------- LAYOUT ----------*/
+
+
+
+
+/* ---------- COMPONENTS ----------*/
+
+
+
+
+/* ---------- MEDIA QUERIES ----------*/
