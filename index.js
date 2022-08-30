@@ -9,7 +9,7 @@ const getPosts = {
     },
 };
 
-// program functions
+// display the posts
 function renderPosts() {
     let html = "";
     for (let post of postsArr) {
