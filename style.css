@@ -154,7 +154,6 @@ textarea {
 #postBody {
     width: 600px;
 }
-
 #blogList * {
     margin-top: var(--gap);
     margin: 2rem auto;
@@ -168,7 +167,6 @@ button {
     border-radius: .5rem;
     box-shadow: 2px 2px 5px #C790C099;
 }
-
 button[type="submit"]:hover,
 button[type="submit"]:focus {
     background-image: linear-gradient(75deg, #F8845BCC, #D55369CC, #9D3573CC);
@@ -176,16 +174,12 @@ button[type="submit"]:focus {
     color: var(--clr-white);
     box-shadow: 2px 2px 5px #7B373E99;
 }
-
 .blog-post {
     padding: 1rem;
     background-color: #E8D5B5CC;
     border-radius: .75rem;
     box-shadow: 2px 2px 5px #C9B69699;
 }
-
-
-
 hr {
     border: 1px solid #F8845B;
 }

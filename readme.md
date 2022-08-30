@@ -65,7 +65,8 @@ It was a simple 3 step process:
 
 Then I re-used the code I had from the Scrimba project, which displays the posts via the `renderPosts` function and fetches the previous posts from the Mockaroo API.
 
-![// display the posts
+![
+    // display the posts
 function renderPosts() {
 let html = "";
 for (let post of postsArr) {
@@ -73,14 +74,14 @@ html += ` <div class="blog-post"> <h3>${post.title}</h3> <p>${post.body}</p> </d
 }
 document.getElementById("blogList").innerHTML = html;
 }
-
 // fetch previous posts
 fetch("https://my.api.mockaroo.com/blog_posts.json?key=undefined", getPosts)
 .then((response) => response.json())
 .then((data) => {
 postsArr = data;
 renderPosts();
-});](https://github.com/JoleneKearse/blog_with_dummy_api/blob/main/screenshots/get-posts.png)
+});
+](https://github.com/JoleneKearse/blog_with_dummy_api/blob/main/screenshots/get-posts.png)
 
 The only additional thing to do was add the `X-API-Key` in the options object:
 
