@@ -51,10 +51,13 @@ body {
     line-height: 1.2;
     color: var(--clr-dark);
     background-color: #f9ffff;
-    background-image: linear-gradient(135deg, #28B68B, #91DB7B, #F9F871);
-    /* background-position: cover; */
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: repeating-linear-gradient(
+        45deg,
+        #f9ffff,
+        #f9ffff 30px,
+        #CACABF1A 30px,
+        #CACABF1A 35px
+    );
 }
 ol, ul {
     quotes: none;
@@ -83,12 +86,13 @@ h2 {
 }
 h3 {
     font-size: clamp(1.25rem, 0.9412rem + 1.3725vw, 3rem);
+    margin: 0;
 }
 h2,
 h3,
 label,
 button {
-    font-weight: 700;
+    font-weight: 600;
 }
 p,
 ::placeholder,
@@ -99,14 +103,23 @@ textarea {
 }
 ::placeholder {
     font-weight: 400;
-    color: var(--clr-accent-teal);
+    color: var(--clr-white);
 }
 input,
 textarea {
-    color: var(--clr-dark);
-    background-color: #F1F1E666;
+    padding: .25rem .5rem;
+    color: var(--clr-white);
+    background-color: #7B373E99;
     border: none;
     border-radius: .25rem;
+    box-shadow: 2px 2px 5px #69252C99;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    background-color: #7B373EBF;
 }
 
 /* ---------- LAYOUT ----------*/
@@ -138,12 +151,38 @@ form {
     width: 600px;
 }
 
+#blogList * {
+    margin-top: var(--gap);
+}
+
 /* ---------- COMPONENTS ----------*/
 button {
     padding: .75rem 1.5rem;
-    background-image: linear-gradient(75deg, #C790C099, #967AAC99, #65659299);
+    background-image: linear-gradient(75deg, #967AAC99, #65659299);
     border: none;
     border-radius: .5rem;
+    box-shadow: 2px 2px 5px #C790C099;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #7B373E;
+    color: var(--clr-white);
+    box-shadow: 2px 2px 5px #7B373E99;
+}
+
+.blog-post {
+    padding: 1rem;
+    background-color: #B6B6AB33;
+    border-radius: .75rem;
+    box-shadow: 2px 2px 5px #AEAEA399;
+}
+
+hr {
+    width: 250px;
+    margin: 5vh 0;
+    margin-inline: auto;
+    border-top: 10px dotted #7B373E66;
 }
 
 /* ---------- MEDIA QUERIES ----------*/
