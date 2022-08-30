@@ -23,3 +23,20 @@ I always have to Google how to do this and messed up my first few tries, so here
 
 ### The cool blurred effect under a fixed element
 
+I've seen this cool effect on sites from awesome creators, but just now finally figured out how to do it!
+
+The effect is a header element, usually, where it blurs out content as you scroll down and it follows you (sorry for the horrid explaination!).
+
+![nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    background-image: linear-gradient(75deg, #55286F99, #9D357399...
+    backdrop-filter: blur(5px);
+}](https://github.com/JoleneKearse/blog_with_dummy_api/blob/main/screenshots/blur-code.png)
+
+You can re-create the effect in two steps:
+
+1. Make the background colour or gradient colours a bit transparent like in line 6.
+2. Create the blur effect by using `backdrop-filter` like in line 7. The higher the px's the more blurred it will be.
