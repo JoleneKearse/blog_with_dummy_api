@@ -1,12 +1,12 @@
 // global variables
 let postsArr = [];
-const titleInput = document.getElementById("postTitle");
-const bodyInput = document.getElementById("postBody");
 const newPost = document.getElementById("newPost");
-
-const getOptions = {
+const getPosts = {
     method: "GET",
-    headers: { "app-id": "630c25a4dfd0a50ffa9a883b" },
+    headers: {
+        "X-API-Key": "5a147440",
+        "Content-Type": "application/json",
+    },
 };
 
 // program functions
@@ -14,47 +14,33 @@ function renderPosts() {
     let html = "";
     for (let post of postsArr) {
         html += `
-            <h3>#{post.title}</h3>
-            <p>${post.body}</p>
-            <hr />`;
+            <div class="blog-post">
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+            </div>
+            <hr />
+            `;
     }
     document.getElementById("blogList").innerHTML = html;
 }
 
 // fetch previous posts
-fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+fetch("https://my.api.mockaroo.com/blog_posts.json?key=undefined", getPosts)
     .then((response) => response.json())
-    .then((posts) => {
-        console.log(posts);
+    .then((data) => {
+        postsArr = data;
         renderPosts();
     });
-// TODO check out Scrim 16 line 21 for how many to display
 
 // add new post
 newPost.addEventListener("submit", function (e) {
     e.preventDefault();
-    const postTitle = titleInput.value;
-    const postBody = bodyInput.value;
-    const data = {
+    const postTitle = document.getElementById("postTitle").value;
+    const postBody = document.getElementById("postBody").value;
+    const post = {
         title: postTitle,
         body: postBody,
     };
-    const postOptions = {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-            "add-id": "630c25a4dfd0a50ffa9a883b",
-        },
-    };
-    fetch("https://dummyapi.io/data/v1/posts", postOptions)
-        .then((response) => response.json())
-        .then((post) => {
-            console.log(post);
-            postsArr.unshift(post);
-            renderPosts();
-            // titleInput.value = ""
-            // bodyInput.value = ""
-            newPost.reset();
-        });
+    postsArr.unshift(post);
+    renderPosts();
 });
